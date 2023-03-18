@@ -9,4 +9,10 @@ fun main() {
    println("Hola $texto")
    var valor: Boolean = true
    println("la variable es: $valor")
+
+   if (num%2 == 0) {
+      println("El número $num es PAR")
+   } else {
+      println("El número $num es IMPAR")
+   }
 }
