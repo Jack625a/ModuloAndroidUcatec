@@ -1,3 +1,3 @@
 fun main() {
-   println("Hola bienvenidos al Modulo del Diplomado")
+   println("Hola bienvenidos Soy Goku")
 }
