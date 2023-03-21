@@ -50,4 +50,38 @@ fun main() {
       println("8x $x = ${8*x}")
       x++
    }
+
+    //Ciclo For - tabla de multiplicar del 1 al 10
+    for (i in 1..10){
+        println("Tabla del $i")
+        for(j in 1..10){
+            println("$i x $j = ${i*j}")
+        }
+        println()
+
+    }
+    // Ejercicio 2 - factorial de un numero
+    println("Ingrese un numero para realizar el calculo del factorial")
+    val n= readLine()!!.toInt()
+    var factorial=1
+    for(i in 1.. n){
+        factorial*=i
+    }
+    println("El factorial de $n es: $factorial")
+    //Ejercicio serie de fibonaci de los 10 valores
+    //a=0 b=1 c=0 a+b=c a=b b=c
+    var a=0
+    var b=1
+    var c:Int
+    for(i in 1..14){
+        println(a)
+        c=a+b
+        a=b
+        b=c
+    }
+    //Ejercicio 4 - numeros pares del 1 al 50
+    for(i in 2..50 step 2){
+        println(i)
+    }
+    
 }
