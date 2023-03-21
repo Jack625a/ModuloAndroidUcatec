@@ -1,3 +1,4 @@
+import java.math.BigDecimal
 fun main() {
    println("Hola bienvenidos al Modulo del Diplomado")
 
@@ -54,5 +55,41 @@ fun main() {
        println("8x $acumulador = ${8*acumulador}")
        acumulador++
    }
+
+   //ciclo for - tabla de multiplicar del 1 al 10
+    for (i in 1 .. 10) {
+        println("Tabla del $i")
+        for (j in 1 .. 10)
+            println(" $i x $j = ${j * i}")
+        println()
+    }
+
+    // factorial
+    print("Ingresar un numero para realizar el calculo del factorial ")
+    num = readLine()?.toInt() as Int
+    var factorial = BigDecimal("1")
+    for (i in 1..num) {
+        factorial *= BigDecimal.valueOf(i.toLong())
+    }
+    println("El factorial de $num = $factorial")
+
+    // ejercicio serie de fibonaci de los 10 valores
+    var a = 0
+    var b = 1
+    var c: Int
+    for (i in 1..10) {
+        println(a)
+        c = a + b
+        a = b
+        b = c
+    }
+    println()
+
+    // mostrra los numeros pares
+    for (i in 2..50 step 2) {
+        println(i)
+    }
+
+    
 
 }
