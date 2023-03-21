@@ -1,7 +1,8 @@
 import java.math.BigDecimal
+
 fun main() {
    println("Hola bienvenidos al Modulo del Diplomado")
-
+/*
    var num: Int=25
    println("El numero es: $num")
    var num2: Double = 3.1416
@@ -97,6 +98,25 @@ fun main() {
     var lista = listOf(4, 5, 8, 17, 2, 63, 1)
     val sumarLista = sumaLista(lista)
     println("La suma de la lista es $sumarLista")
+*/
+    val animalPerro = Animal()
+    val animalGato = Animal()
+    val animalCaballo = Animal()
+    animalPerro.crear("Chico", 3)
+    animalGato.crear("Paco", 5)
+    animalCaballo.crear("Perchero", 15)
+    animalPerro.caminar()
+    animalGato.comer()
+    animalCaballo.comer()
+    animalCaballo.caminar()
+
+    println("Cuenta Bancaria")
+    val cuentas = listOf(
+        CuentaBancaria("KevinArroyo", "123"),
+        CuentaBancaria("David Quispe", "456"),
+        CuentaBancaria("Alex Sajama", "789")
+    )
+    println("Cuenta de ${cuentas.get(1).titular} con un saldo de ${cuentas.get(1).saldo}")
 
 }
 
