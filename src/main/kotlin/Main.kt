@@ -90,6 +90,25 @@ fun main() {
         println(i)
     }
 
-    
+    print("La suma es: ")
+    println(suma(4, 5))
 
+    // funciones en kotli
+    var lista = listOf(4, 5, 8, 17, 2, 63, 1)
+    val sumarLista = sumaLista(lista)
+    println("La suma de la lista es $sumarLista")
+
+}
+
+// funciones en kotli
+fun suma(x:Int, y:Int): Int {
+    return x + y
+}
+
+fun sumaLista(lista: List<Int>): Int {
+    var suma: Int = 0
+    for (numero in lista) {
+        suma += numero
+    }
+    return suma
 }
