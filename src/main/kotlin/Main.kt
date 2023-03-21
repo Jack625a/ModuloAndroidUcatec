@@ -46,4 +46,42 @@ fun main() {
       println("5x$x = ${5*x}")
       x++
    }
+   /*Ciclo for - tabla de multiplicación*/
+   println()
+   println("Ejemplos ciclo for")
+   for(i in 1 ..10){
+      println("Tabla del $i")
+      for(j in 1 ..10){
+         println("$i x $j = ${i*j}")
+      }
+      println()
+   }
+   /*Ciclo for - factorial de un número*/
+   println("Ingrese un número: ")
+   val n= readln()!!.toInt()
+   var fac=1
+   for(i in 1 ..n){
+      fac*=i
+   }
+   println("El factorial del número $n es $fac")
+   println()
+
+   /*Ciclo for - serie de fibonaci
+   a=0 b=1 c=0  a+b=c  a=b  b=c*/
+   println("Los $n primeros números de la serie de Fibonacci son:")
+   var a=0
+   var b=1
+   var c:Int
+   for(i in 1 ..n){
+      println(a)
+      c=a+b
+      a=b
+      b=c
+   }
+   /*Ciclo for - números pares*/
+   println()
+   println("Números pares del 1 al 20")
+   for (i in 2 ..20 step 2){
+      println(i)
+   }
 }
