@@ -84,4 +84,24 @@ fun main() {
    for (i in 2 ..20 step 2){
       println(i)
    }
+   /*funcion sumar*/
+   println()
+   println("Funciones")
+   val resultado=sumar(10,24)
+   println("La suma es: $resultado")
+
+   /*funcion sumarLista*/
+   var listaNumeros= listOf(1,6,3,5,15,7,2,1)
+   val sumLista=sumarLista(listaNumeros)
+   println("La suma de la lista es: $sumLista")
+}
+fun sumar(x:Int,y:Int):Int{
+   return x+y
+}
+fun sumarLista(lista:List<Int>):Int{
+   var suma=0
+   for(numero in lista){
+      suma+=numero
+   }
+   return suma
 }
