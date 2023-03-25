@@ -94,6 +94,66 @@ fun main() {
    var listaNumeros= listOf(1,6,3,5,15,7,2,1)
    val sumLista=sumarLista(listaNumeros)
    println("La suma de la lista es: $sumLista")
+
+    //clases
+    println()
+    println("Creación de clases")
+    //creación del objeto de la clase
+    val animalPerro=Animal("Dogy",3)
+    val animalGato=Animal("Pepe",5)
+    val animalCaballo=Animal("Noble",10)
+    animalGato.caminar()
+    animalPerro.comer()
+    animalCaballo.dormir()
+
+    //clase cuenta bancaria
+    println("")
+    println("Clase cuenta bancaria")
+    val cuentas= listOf(
+        CuentaBancaria("Daniela",2000,"123"),
+        CuentaBancaria("Paola",5000,"456"),
+        CuentaBancaria("Ximena",3000,"789")
+    )
+    println("Ingrese su contraseña:")
+    val contrasenaIngresada= readLine()
+    val cuenta=cuentas.find { it.contrasena==contrasenaIngresada }
+    if(cuenta!=null){
+        println("Bienvenido/a al cajero ${cuenta.titular}")
+        var opcion:Int
+        do {
+            println("1. Depositar\n" +
+                    "2. Retirar \n"+
+                    "3. Ver saldo\n"+
+                    "4. Salir".trimIndent()
+            )
+            opcion= readLine()?.toIntOrNull()?:0
+            when(opcion){
+                1->{
+                    println("Ingrese la cantidad a depositar: ")
+                    val cantidad= readLine()?.toIntOrNull()?:0
+                    cuenta.depositar(cantidad)
+                 }
+                2->{
+                    println("Ingrese la cantidad a retirar")
+                    val cantidad= readLine()?.toIntOrNull()?:0
+                    cuenta.retirar(cantidad)
+                }
+                3->{
+                    cuenta.verSaldo()
+                }
+                4->{
+                    println("Gracias, hasta luego")
+                }else->{
+                    println("Opción inválida, selecciona un opción correcta:"+"1. Depositar\n" +
+                            "2. Retirar \n"+
+                            "3. Ver saldo\n"+
+                            "4. Salir")
+                }
+            }
+        }while (opcion!=4)
+    }else{
+        println("Error, contraseña incorrecta. Inténtelo nuvamente")
+    }
 }
 fun sumar(x:Int,y:Int):Int{
    return x+y
@@ -104,4 +164,34 @@ fun sumarLista(lista:List<Int>):Int{
       suma+=numero
    }
    return suma
+}
+class Animal(val nombre:String,val edad:Int){
+    fun comer(){
+        println("$nombre está comiendo")
+    }
+    fun caminar(){
+        println("$nombre está caminando")
+    }
+    fun dormir(){
+        println("$nombre esta durmiendo")
+    }
+}
+class CuentaBancaria(val titular:String,var saldo:Int, val contrasena:String){
+    fun depositar(cantidad:Int){
+        saldo+=cantidad
+        println("Realizó el depósito de $cantidad Bs. El saldo actual es: $saldo")
+    }
+    fun retirar(cantidad:Int):Boolean{
+        if(cantidad>saldo){
+            println("Error, saldo insuficiente para completar esta acción. Saldo actual:$saldo")
+            return false
+        }else{
+            saldo-=cantidad
+            println("Retiro de $cantidad con éxito. Saldo actual: $saldo")
+            return true
+        }
+    }
+    fun verSaldo(){
+        println("Saldo actual es: $saldo Bs.")
+    }
 }
