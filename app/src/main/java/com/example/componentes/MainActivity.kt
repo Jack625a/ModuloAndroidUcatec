@@ -15,6 +15,6 @@ import android.widget.VideoView
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.widgets)
+        setContentView(R.layout.widgets2)
     }
 }
