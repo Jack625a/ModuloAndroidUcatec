@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Proyecto</string>
+    <string name="contorno">contorno</string>
+    <string name="enviar">Enviar</string>
+    <string name="boton_con_redondeado">boton con redondeado</string>
+</resources>
