@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navruta">
+    <fragment
+        android:id="@+id/screenSplashFragment"
+        android:name="com.example.componentes.ScreenSplashFragment"
+        android:label="fragment_screen_splash"
+        tools:layout="@layout/fragment_screen_splash" >
+        <action
+            android:id="@+id/action_screenSplashFragment_to_FragmentPantalla1"
+            app:destination="@id/FragmentPantalla1" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentPantalla1"
+        android:name="com.example.componentes.FragmentPantalla1"
+        android:label="fragment_pantalla1"
+        tools:layout="@layout/fragment_pantalla1" >
+        <action
+            android:id="@+id/action_FragmentPantalla1_to_FragmentPantalla2"
+            app:destination="@id/FragmentPantalla2" />
+        <action
+            android:id="@+id/action_FragmentPantalla1_to_FragmentPantalla3"
+            app:destination="@id/FragmentPantalla3" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentPantalla2"
+        android:name="com.example.componentes.FragmentPantalla2"
+        android:label="fragment_pantalla2"
+        tools:layout="@layout/fragment_pantalla2" >
+        <action
+            android:id="@+id/action_FragmentPantalla2_to_FragmentPantalla1"
+            app:destination="@id/FragmentPantalla1" />
+        <action
+            android:id="@+id/action_FragmentPantalla2_to_FragmentPantalla3"
+            app:destination="@id/FragmentPantalla3" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentPantalla3"
+        android:name="com.example.componentes.FragmentPantalla3"
+        android:label="fragment_pantalla3"
+        tools:layout="@layout/fragment_pantalla3" >
+        <action
+            android:id="@+id/action_FragmentPantalla3_to_FragmentPantalla2"
+            app:destination="@id/FragmentPantalla2" />
+        <action
+            android:id="@+id/action_FragmentPantalla3_to_FragmentPantalla1"
+            app:destination="@id/FragmentPantalla1" />
+    </fragment>
+
+
+
+</navigation>
