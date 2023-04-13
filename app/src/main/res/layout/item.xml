@@ -11,10 +11,10 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
         android:layout_marginVertical="12dp"
-        android:layout_marginStart="12dp"
         app:cardCornerRadius="25dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.004">
@@ -25,9 +25,9 @@
             android:layout_height="100dp"
             android:scaleType="fitXY"
             android:src="@drawable/biblia"
-            app:layout_constrainStart_toStartOf="parent"
-            app:layout_constrainTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
 
             />
 
@@ -42,8 +42,7 @@
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndtOf="parent"
-            app:layout_constraintStart_toEndtOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.v7.widget.CardView>

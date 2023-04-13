@@ -7,20 +7,20 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 
-class Adapter(val tarjetasList:ArrayList<Items>): RecyclerView.Adapter<Adapter.MyViewHolder>() {
+class Adapter(val tarjetasList:ArrayList<Itemm>): RecyclerView.Adapter<Adapter.MyViewHolder>() {
     inner class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         val imageView:ImageView=itemView.findViewById(R.id.imageView)
         val textView: TextView =itemView.findViewById(R.id.textView)
 
     }
-    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): Adapter.MyViewHolder {
-        return MyViewHolder(LayoutInflater.from(p0.context).inflate(R.layout.item,p0,false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Adapter.MyViewHolder {
+        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item,parent,false))
     }
 
-    override fun onBindViewHolder(p0: Adapter.MyViewHolder, p1: Int) {
-        val item=tarjetasList[p1]
-        p0.textView.text=item.name
-        p0.imageView.setImageResource(item.image)
+    override fun onBindViewHolder(holder: Adapter.MyViewHolder, position: Int) {
+        val item=tarjetasList[position]
+        holder.textView.text=item.name
+        holder.imageView.setImageResource(item.image)
 
 
     }
